@@ -1,4 +1,25 @@
-
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+/* Add padding to account for fixed navbar */
+main {
+  padding-top: 5rem; /* Matches the navbar height */
+}
+
+/* Basic reset and defaults */
+body {
+  @apply antialiased text-gray-800;
+}
+
+/* Container utilities */
+.container {
+  @apply max-w-7xl mx-auto px-4;
+}
+
+/* Transition utilities */
+.custom-transition {
+  transition-property: all;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+  transition-duration: 300ms;
+}

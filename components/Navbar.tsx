@@ -22,7 +22,7 @@ const menuItems: MenuItem[] = [
         title: "Company",
         items: [
           { title: "Awards", href: "/awards" },
-          { title: "Our Team", href: "/our-team" },
+          { title: "Meet Our Team", href: "/meet-the-exceptional-team" },
           { title: "Timeline", href: "/timeline" }
         ]
       }
