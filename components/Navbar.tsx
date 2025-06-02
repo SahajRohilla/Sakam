@@ -3,6 +3,7 @@ import { useState } from "react";
 interface SubMenuItem {
   title: string;
   href: string;
+  subItems?: SubMenuItem[];
 }
 
 interface MenuItem {
@@ -34,25 +35,81 @@ const menuItems: MenuItem[] = [
       {
         title: "UI/UX Design",
         items: [
-          { title: "UX Prototyping", href: "/services/ux-prototyping" },
-          { title: "Interface Design", href: "/services/interface-design" }
-        ]
-      },
-      {
-        title: "Web Development",
-        items: [
-          { title: "PHP Framework", href: "/services/php-framework" },
-          { title: "MEAN Stack", href: "/services/mean-stack" },
-          { title: "MERN Stack", href: "/services/mern-stack" },
-          { title: "WordPress", href: "/services/wordpress" }
+          { title: "UX Prototyping", href: "/services/ux-prototyping" }
         ]
       },
       {
         title: "Mobile App Development",
         items: [
+          { title: "Hybrid", href: "/services/hybrid" },
+          { title: "Swift", href: "/services/swift" },
           { title: "React Native", href: "/services/react-native" },
+          { title: "Kotlin", href: "/services/kotlin" },
           { title: "Flutter", href: "/services/flutter" },
-          { title: "Native App Development", href: "/services/native-app" }
+          { title: "Java", href: "/services/java" },
+          { title: "Native App Development", href: "/services/native-app-development" },
+          { title: "Objective-C", href: "/services/objective-c" }
+        ]
+      },
+      {
+        title: "Web Development",
+        items: [
+          { title: "PHP Framework", href: "/services/php-framework", subItems: [
+            { title: "Zend Framework", href: "/services/zend-framework" },
+            { title: "Cake PHP", href: "/services/cake-php" },
+            { title: "Laravel", href: "/services/laravel" }
+          ]},
+          { title: "MEAN Stack", href: "/services/mean-stack", subItems: [
+            { title: "Node.js", href: "/services/node-js" },
+            { title: "Angular.js", href: "/services/angular-js" }
+          ]},
+          { title: "MERN Stack", href: "/services/mern-stack", subItems: [
+            { title: "React.js", href: "/services/react-js" }
+          ]},
+          { title: "Open Source Technology", href: "/services/open-source", subItems: [
+            { title: "Drupal", href: "/services/drupal" },
+            { title: "Python", href: "/services/python" }
+          ]},
+          { title: "ECommerce", href: "/services/ecommerce", subItems: [
+            { title: "WooCommerce", href: "/services/woocommerce" },
+            { title: "Magento", href: "/services/magento" },
+            { title: "Shopify", href: "/services/shopify" }
+          ]},
+          { title: "WordPress", href: "/services/wordpress", subItems: [
+            { title: "Elementor", href: "/services/elementor" }
+          ]},
+          { title: "CMS", href: "/services/cms", subItems: [
+            { title: "Webflow", href: "/services/webflow" },
+            { title: "Wix", href: "/services/wix" },
+            { title: "Squarespace", href: "/services/squarespace" },
+            { title: "Hubspot", href: "/services/hubspot" },
+            { title: "GoHighLevel", href: "/services/gohighlevel" }
+          ]}
+        ]
+      },
+      {
+        title: "Digital Marketing",
+        items: [
+          { title: "SEO", href: "/services/seo" },
+          { title: "SMM", href: "/services/smm" },
+          { title: "PPC", href: "/services/ppc" },
+          { title: "ORM", href: "/services/orm" },
+          { title: "Content Marketing", href: "/services/content-marketing" }
+        ]
+      },
+      {
+        title: "Other Services",
+        items: [
+          { title: "Internet of Things", href: "/services/iot" },
+          { title: "Blockchain Development", href: "/services/blockchain" },
+          { title: "Game Development", href: "/services/game-development" },
+          { title: "Artificial Intelligence", href: "/services/ai", subItems: [
+            { title: "Deep Learning", href: "/services/deep-learning" },
+            { title: "Chatbot", href: "/services/chatbot" },
+            { title: "Decision Management", href: "/services/decision-management" },
+            { title: "Machine Learning", href: "/services/machine-learning" },
+            { title: "NLP", href: "/services/nlp" }
+          ]}
         ]
       }
     ]
@@ -63,15 +120,46 @@ const menuItems: MenuItem[] = [
       {
         title: "Industries",
         items: [
+          { title: "Sports", href: "/solutions/sports" },
+          { title: "Metaverse", href: "/solutions/metaverse" },
           { title: "Real Estate", href: "/solutions/real-estate" },
+          { title: "Ride Sharing", href: "/solutions/ride-sharing" },
+          { title: "Dating", href: "/solutions/dating" },
+          { title: "Fitness App", href: "/solutions/fitness-app" },
+          { title: "Multivendor Marketplace", href: "/solutions/multivendor-marketplace" },
+          { title: "On Demand Service", href: "/solutions/on-demand-service" },
+          { title: "BFSI", href: "/solutions/bfsi" },
+          { title: "Job Portal", href: "/solutions/job-portal" },
+          { title: "Social Media", href: "/solutions/social-media" },
+          { title: "Travel and Tourism", href: "/solutions/travel-tourism" },
+          { title: "Crowdfunding", href: "/solutions/crowdfunding" },
+          { title: "Salon and Spa", href: "/solutions/salon-spa" },
+          { title: "Online Ordering", href: "/solutions/online-ordering" },
+          { title: "Fintech", href: "/solutions/fintech" },
           { title: "Healthcare", href: "/solutions/healthcare" },
+          { title: "Logistics & Distribution", href: "/solutions/logistics" },
+          { title: "Travel Booking", href: "/solutions/travel-booking" },
           { title: "E-Learning", href: "/solutions/e-learning" },
-          { title: "Fintech", href: "/solutions/fintech" }
+          { title: "Food Delivery", href: "/solutions/food-delivery" }
         ]
       }
     ]
   },
   { title: "Case Studies", href: "/case-studies" },
+  {
+    title: "What's New",
+    subItems: [
+      {
+        title: "Updates",
+        items: [
+          { title: "News & Events", href: "/news-events" },
+          { title: "CSR", href: "/csr" },
+          { title: "Society", href: "/society" },
+          { title: "Workplace", href: "/workplace" }
+        ]
+      }
+    ]
+  },
   { title: "Blog", href: "/blog" }
 ];
 
@@ -108,13 +196,32 @@ export default function Navbar() {
                         <h3 className="font-semibold text-gray-900 mb-2">{section.title}</h3>
                         <ul className="space-y-2">
                           {section.items.map((subItem) => (
-                            <li key={subItem.title}>
+                            <li key={subItem.title} className="group relative">
                               <a
                                 href={subItem.href}
-                                className="text-gray-600 hover:text-blue-600 block"
+                                className="text-gray-600 hover:text-blue-600 block py-1"
                               >
                                 {subItem.title}
+                                {subItem.subItems && (
+                                  <span className="float-right">›</span>
+                                )}
                               </a>
+                              {subItem.subItems && (
+                                <div className="absolute left-full top-0 w-64 bg-white shadow-lg rounded-lg p-4 ml-2 hidden group-hover:block">
+                                  <ul className="space-y-2">
+                                    {subItem.subItems.map((nestedItem) => (
+                                      <li key={nestedItem.title}>
+                                        <a
+                                          href={nestedItem.href}
+                                          className="text-gray-600 hover:text-blue-600 block py-1"
+                                        >
+                                          {nestedItem.title}
+                                        </a>
+                                      </li>
+                                    ))}
+                                  </ul>
+                                </div>
+                              )}
                             </li>
                           ))}
                         </ul>
