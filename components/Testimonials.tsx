@@ -1,64 +1,62 @@
 export default function Testimonials() {
   const testimonials = [
     {
-      quote: "Sakam transformed our outdated website into a modern, user-friendly platform that increased our online conversions by 150%. Their attention to detail and technical expertise is unmatched.",
+      quote: "Working with Sakam transformed our business. Their expertise in web development and commitment to quality delivered exceptional results.",
       author: "Sarah Johnson",
       position: "CEO",
-      company: "TechFlow Solutions",
-      avatar: "🌟",
-      rating: 5
+      company: "TechStart Inc.",
+      rating: 5,
+      avatar: "👩‍💼"
     },
     {
-      quote: "The mobile app they developed for our e-commerce business exceeded all expectations. Our customer engagement has tripled, and the app's performance is flawless across all devices.",
+      quote: "The team's innovative approach to mobile development helped us launch a successful app that our users love.",
       author: "Michael Chen",
-      position: "Founder",
-      company: "EcoMarket",
-      avatar: "🚀",
-      rating: 5
+      position: "Product Manager",
+      company: "MobileFirst",
+      rating: 5,
+      avatar: "👨‍💼"
     },
     {
-      quote: "Working with Sakam was a game-changer for our startup. They delivered a complex AI-powered solution on time and within budget. Highly recommend their services!",
-      author: "Emily Rodriguez",
+      quote: "Their cybersecurity solutions gave us peace of mind. Professional, thorough, and always available when we need them.",
+      author: "Emma Davis",
       position: "CTO",
-      company: "DataInsight Labs",
-      avatar: "⭐",
-      rating: 5
+      company: "SecureNet",
+      rating: 5,
+      avatar: "👩‍💻"
     },
     {
-      quote: "Their digital marketing strategy helped us reach new markets and increased our brand visibility significantly. The ROI has been exceptional, and the team is incredibly professional.",
-      author: "David Thompson",
-      position: "Marketing Director",
-      company: "GrowthCorp",
-      avatar: "💎",
-      rating: 5
+      quote: "Outstanding DevOps services that streamlined our deployment process and improved our team's efficiency.",
+      author: "Alex Thompson",
+      position: "Lead Developer",
+      company: "CloudScale",
+      rating: 5,
+      avatar: "👨‍💻"
     }
   ];
 
   const companies = [
-    { name: "TechFlow", logo: "🏢" },
-    { name: "EcoMarket", logo: "🌱" },
-    { name: "DataInsight", logo: "📊" },
-    { name: "GrowthCorp", logo: "📈" },
+    { name: "TechCorp", logo: "🏢" },
     { name: "InnovateLabs", logo: "🔬" },
-    { name: "CloudSync", logo: "☁️" }
+    { name: "FutureWorks", logo: "🚀" },
+    { name: "SmartSystems", logo: "💡" }
   ];
 
   return (
-    <section className="py-20 bg-gradient-to-br from-gray-50 to-blue-50 relative overflow-hidden">
+    <section className="py-20 bg-gradient-to-br from-gray-50 to-blue-50 dark:from-gray-800 dark:to-blue-900 relative overflow-hidden">
       {/* Background Elements */}
-      <div className="absolute top-0 left-0 w-72 h-72 bg-gradient-to-br from-blue-200/30 to-transparent rounded-full -ml-36 -mt-36"></div>
-      <div className="absolute bottom-0 right-0 w-96 h-96 bg-gradient-to-tl from-cyan-200/30 to-transparent rounded-full -mr-48 -mb-48"></div>
+      <div className="absolute top-0 left-0 w-72 h-72 bg-gradient-to-br from-blue-200/30 dark:from-blue-400/10 to-transparent rounded-full -ml-36 -mt-36"></div>
+      <div className="absolute bottom-0 right-0 w-96 h-96 bg-gradient-to-tl from-cyan-200/30 dark:from-cyan-400/10 to-transparent rounded-full -mr-48 -mb-48"></div>
       
       <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         {/* Header */}
         <div className="text-center mb-16">
-          <div className="inline-flex items-center px-4 py-2 bg-blue-100 rounded-full mb-4">
-            <span className="text-blue-600 text-sm font-medium">Client Success Stories</span>
+          <div className="inline-flex items-center px-4 py-2 bg-blue-100 dark:bg-blue-900/50 rounded-full mb-4">
+            <span className="text-blue-600 dark:text-blue-400 text-sm font-medium">Client Success Stories</span>
           </div>
-          <h2 className="text-4xl lg:text-5xl font-bold text-gray-900 mb-6">
+          <h2 className="text-4xl lg:text-5xl font-bold text-gray-900 dark:text-white mb-6">
             What Our Clients Say
           </h2>
-          <p className="text-xl text-gray-600 max-w-3xl mx-auto leading-relaxed">
+          <p className="text-xl text-gray-600 dark:text-gray-400 max-w-3xl mx-auto leading-relaxed">
             Don't just take our word for it. Here's what our amazing clients have to say about 
             working with our team and the results we've achieved together.
           </p>
@@ -69,7 +67,7 @@ export default function Testimonials() {
           {testimonials.map((testimonial, index) => (
             <div
               key={index}
-              className="bg-white rounded-2xl p-8 shadow-lg hover:shadow-xl transition-all duration-300 transform hover:-translate-y-2 border border-gray-100"
+              className="bg-white dark:bg-gray-900 rounded-2xl p-8 shadow-lg hover:shadow-xl transition-all duration-300 transform hover:-translate-y-2 border border-gray-100 dark:border-gray-800"
             >
               {/* Rating */}
               <div className="flex items-center gap-1 mb-6">
@@ -81,19 +79,19 @@ export default function Testimonials() {
               </div>
 
               {/* Quote */}
-              <blockquote className="text-gray-700 text-lg leading-relaxed mb-6">
+              <blockquote className="text-gray-700 dark:text-gray-300 text-lg leading-relaxed mb-6">
                 "{testimonial.quote}"
               </blockquote>
 
               {/* Author */}
               <div className="flex items-center gap-4">
-                <div className="w-12 h-12 bg-gradient-to-br from-blue-500 to-cyan-500 rounded-full flex items-center justify-center text-white text-xl">
+                <div className="w-12 h-12 bg-gradient-to-br from-blue-500 to-cyan-500 dark:from-blue-600 dark:to-cyan-600 rounded-full flex items-center justify-center text-white text-xl">
                   {testimonial.avatar}
                 </div>
                 <div>
-                  <div className="font-semibold text-gray-900">{testimonial.author}</div>
-                  <div className="text-gray-600 text-sm">{testimonial.position}</div>
-                  <div className="text-blue-600 text-sm font-medium">{testimonial.company}</div>
+                  <div className="font-semibold text-gray-900 dark:text-white">{testimonial.author}</div>
+                  <div className="text-gray-600 dark:text-gray-400 text-sm">{testimonial.position}</div>
+                  <div className="text-blue-600 dark:text-blue-400 text-sm font-medium">{testimonial.company}</div>
                 </div>
               </div>
             </div>
@@ -102,12 +100,12 @@ export default function Testimonials() {
 
         {/* Company Logos */}
         <div className="text-center">
-          <h3 className="text-lg font-semibold text-gray-600 mb-8">Trusted by Leading Companies</h3>
+          <h3 className="text-lg font-semibold text-gray-600 dark:text-gray-400 mb-8">Trusted by Leading Companies</h3>
           <div className="flex flex-wrap justify-center items-center gap-8 md:gap-12">
             {companies.map((company, index) => (
               <div
                 key={index}
-                className="flex items-center gap-3 text-gray-400 hover:text-gray-600 transition-colors duration-300"
+                className="flex items-center gap-3 text-gray-400 dark:text-gray-500 hover:text-gray-600 dark:hover:text-gray-300 transition-colors duration-300"
               >
                 <span className="text-2xl">{company.logo}</span>
                 <span className="font-medium text-lg">{company.name}</span>
@@ -118,19 +116,19 @@ export default function Testimonials() {
 
         {/* CTA Section */}
         <div className="text-center mt-16">
-          <div className="bg-white rounded-2xl p-8 md:p-12 shadow-lg border border-gray-100">
-            <h3 className="text-2xl font-bold text-gray-900 mb-4">
+          <div className="bg-white dark:bg-gray-900 rounded-2xl p-8 md:p-12 shadow-lg border border-gray-100 dark:border-gray-800">
+            <h3 className="text-2xl font-bold text-gray-900 dark:text-white mb-4">
               Ready to Join Our Success Stories?
             </h3>
-            <p className="text-gray-600 mb-8 max-w-2xl mx-auto">
+            <p className="text-gray-600 dark:text-gray-400 mb-8 max-w-2xl mx-auto">
               Let's discuss your project and create a solution that will make your business 
               the next success story we'll be proud to showcase.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              <button className="px-8 py-3 bg-blue-600 hover:bg-blue-700 text-white rounded-lg font-semibold transition-colors duration-300 shadow-lg hover:shadow-xl">
+              <button className="px-8 py-3 bg-blue-600 hover:bg-blue-700 dark:bg-blue-500 dark:hover:bg-blue-600 text-white rounded-lg font-semibold transition-colors duration-300 shadow-lg hover:shadow-xl">
                 Start Your Project
               </button>
-              <button className="px-8 py-3 border-2 border-gray-300 hover:border-gray-400 text-gray-700 rounded-lg font-semibold transition-colors duration-300">
+              <button className="px-8 py-3 border-2 border-gray-300 dark:border-gray-700 hover:border-gray-400 dark:hover:border-gray-600 text-gray-700 dark:text-gray-300 rounded-lg font-semibold transition-colors duration-300">
                 View Case Studies
               </button>
             </div>
